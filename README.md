@@ -1,37 +1,4 @@
-Fonctionnel :
-	- Pages créées en live depuis une liste de noms de page (récupérée depuis les préfs du robot)(salesdemo.demo-launcher.	pages)
-	- Applications d'une page ajoutées en live depuis une liste de noms d'applis (liste de uuid) (récupérée depuis les 	    préfs du robot)(salesdemo.demo-launcher.pages)
-	- Icone des apps récupérées depuis l'app-ID (uuid)
-    - Noms des pages correspondant à la langue du robot
-    - Nom des apps correspondant à la langue du robot
-    - Applications présentes dans le menu, ajoutées en live depuis une liste de noms d'applis (liste de uuid) (récupérée depuis les préfs du robot)(salesdemo.demo-launcher.menu)
-    - Possibilité de faire apparaître toutes les applications installées sur le robot dans le menu et de les lancer
-    - Fichier CSS Séparé 
-    - Ajout d'une page d'accueil
-    - Blindage, Lancement d'une app impossible, si elle ne supporte pas la langue actuelle du robot
-    - Gestion des actions des boutons factorisée
-    - Suppression de toutes les fonctions inutiles du demo-launcher.py
-    - Service lancé automatiquement au démarrage  (autorun = true dans le manifest)
-    - Display de la tablette effectué au premier passage de LifeState en solitary
-    - Démarrage et arrêt des behaviors gérés par demo-launcher.py
-    - Ajout d'un ping de la tablette vers Pepper. Si la tablette se déconnecte, lancement d'une procédure pour relancer l'affichage.
-    - Correction d'un bug du watchDog Tablette
-    - Légère modification interface graphique (boutons)
-    - Boutons Home et Help cachés sur la page d'accueil  
-    - Possibilité de mettre n'importe quel caractère dans les noms des pages.
-    - id des pages et des boutons créé en aléatoires et plus basés sur le nom des pages.
-    - Modification du delay avant affichage après une sortie d'app, ajout d'un delay de 1,2s (problème détecté à la sortie de mood-mirror par exemple)
-    - Modification de la gestion des clicks sur les différents bouttons.
-    - Factorisation du code.
-    - Affichage de l'icone de l'app avant lancement.
-    - Correction de bugs.
-    - Ajout de la pref behaviorNameDisplayed, permet de paramétrer l'affichage par défaut ou non des noms de apps.
-    - Modification de la méthode de ping (désormais en double sens entre le python et le js).
-    - Ajout de la pref "dialogAlwaysRunning", pour déclencher automatiquement le dialog à la sortie d'une app et au boot du robot.
-    - Police Nunito ajoutée en local
-    - Sécurité au lancement d'une app ajoutée, si une app ne parvient pas à se lancer au bout de 15 secondes, l'appLauncher est display à nouveau.
-    - Compatible Naoqi 2.5.2.36 et tablette 1.8a
-
+app-launcher
 
 Gestions des préférences
 
@@ -47,7 +14,7 @@ format value
     {'title':{'English':'Tourism','French':'Tourisme'},'apps':['check-in-7b9a99','check-in-7b9a99', 'loyalty-program', 'satisfaction-survey']}
 
     {'title':{'English':'Office','French':'Bureau'},'apps':['bank-welcome','bank-welcome', 'loyalty-program', 'satisfaction-survey']}
-	
+
 
 Domaine
 tool.applauncher
@@ -62,7 +29,7 @@ pepper.png
 Domaine
 tool.applauncher
 
-key 
+key
 behaviorNameDisplayed
 
 format value
@@ -83,7 +50,7 @@ Domaine
 com.aldebaran.system.tablet
 
 key
-MainActivity 
+MainActivity
 
 format value
 image
@@ -160,17 +127,17 @@ unefois l'image png base64 convertie en string, pour l'afficher en html
         :return: (str) a base64-encoded package icon.
         """
         return base64.encodestring(self.pacman.packageIcon(uuid))
-   
+
  côté JS:
 
  	//id_div, (str) id de la div ou l'on souhaite ajouter l'image
  	//uuid, (str) application id de l'app dont on veut l'image
- 	
+
  	function get_icon_app(id_div, uuid){
     session.service("DemoLauncher").then( function(dm) { //remplacer DemoLauncher par le service dans lequel est ajoutée la fonction python
         dm.package_icon(uuid).then(function (iconApp){
             $("#"+id_div).append('<div><img src="data:image/png;base64,'+iconApp+'" height=150px width=150px style="margin-bottom:20px"/></div>');
-        });         
+        });
     });
 }
 
