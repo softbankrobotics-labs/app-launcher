@@ -1,0 +1,6 @@
+topic: ~applauncher_pages_names_topic()
+language: frf
+
+dynamic:applauncher_pages_names
+u:(_~applauncher_pages_names) $AppLauncher/PageRequired=$1
+u:(["{"page d'" accueil" "retour"]) $AppLauncher/PageRequired="homepage"

@@ -1,0 +1,30 @@
+[
+	{
+		"title":{
+			"English":"Retail",
+			"French":"Retail"
+		},"apps":[
+			"product-information","shop-orientation","loyalty-program","satisfaction-survey"]
+	},
+	{
+		"title":{
+			"English":"Games",
+			"French":"Jeux"
+		},"apps":
+			["pepper-play","musicboxes","pepperdetective","seeandlisten","strike_the_pose"]
+	},
+	{
+		"title":{
+			"English":"Office",
+			"French":"Bureau"
+		},"apps":[
+		"bank-welcome","loyalty-program","satisfaction-survey"]
+	},
+	{
+		"title":{
+			"English":"Pepper",
+			"French":"Pepper"
+		},"apps":[
+		"pepper-presentation","languages-demonstration","mood-mirror","locomotion-dialog"]
+	}
+]

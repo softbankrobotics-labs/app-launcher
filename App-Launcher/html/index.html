@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1280, user-scalable=no" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/robotutils.js"></script>
+    <script src='js/fastclick.js'></script>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="header_div">
+        <div class="float_left">
+            <button id="button_home"  style="display: none;" >
+                <span class="glyphicon glyphicon-home"></span>
+            </button>
+        </div>
+        <div class="float_right dropdown">
+            <button data-toggle="dropdown" class="to_hide_when_not_ready" >
+                <span class="glyphicon glyphicon-bullhorn"></span>
+            </button>
+            <div id="header_audio_dropdown" class="dropdown-menu dropdown-menu-right">
+                <button id="button_volume_down"></button>
+                <button id="button_volume_up"></button>
+                <button id="button_unmute" style="display:none;"></button>
+                <button id="button_mute"></button>
+            </div>
+        </div>
+        <div id="header_logo"></div>
+    </div>
+
+    <div id="content_div">
+        <div id="content_loading_div"></div>
+        <div id="content_sleeping_div" style="display: none;"></div>
+        <div id="content_ready_div" style="display: none;"></div>
+    </div>
+
+    <div id="footer_div">
+        <div class="float_right dropup">
+            <button class="to_hide_when_not_ready" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-option-horizontal"></span>
+            </button>
+            <div id="footer_all_apps_dropdown" class="dropdown-menu dropdown-menu-right"></div>
+        </div>
+    </div>
+</body>
+</html>

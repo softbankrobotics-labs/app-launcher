@@ -1,0 +1,230 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    overflow:hidden;
+    background-color: #aecbd6;
+    background-image: url(../images/background.jpg);
+    background-size: contain;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+/***
+    COMMON
+***/
+
+.float_left {
+    float:left;
+}
+.float_right {
+    float:right;
+}
+.to_hide_when_not_ready {
+    display:none;
+}
+
+/***
+    COMMON BUTTONS DESCRIPTION
+***/
+
+button{
+    border: none;
+    color:white;
+    background: transparent;
+    font-size: 35px;
+    height: 80px;
+    width: 80px;
+}
+button:active{
+    color: lime;
+}
+button:focus {
+    outline:0;
+}
+::-webkit-scrollbar {
+    display:none;
+}
+
+/***
+    HEADER BAR
+***/
+
+#header_div{
+    position:relative;
+    top:0;
+    height:180px;
+}
+#header_logo{
+    position:relative;
+    height:80%;
+    top:20%;
+    background-image: url(../images/Pepper-white.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+#header_audio_dropdown{
+    width: 270px;
+    top:0;
+    margin-top:57px;
+    margin-right: 20px;
+    background-color:white;
+    border:none;
+    border-radius: 0px;
+    text-align: center;
+}
+#header_audio_dropdown>button{
+    color: #607a84;
+}
+#button_unmute{
+    background-image: url(../images/conversation-active.png);
+    background-size: 48px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+#button_mute{
+    background-image: url(../images/conversation-inactive.png);
+    background-size: 48px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+#button_volume_up{
+    background-image: url(../images/volume-up.png);
+    background-size: 48px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+#button_volume_down{
+    background-image: url(../images/volume-down.png);
+    background-size: 48px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+/***
+    MAIN BUTTONS BAR
+***/
+
+#content_div {
+width: 80%;
+    margin: 50px 10%;
+    height: 520px;
+}
+#content_loading_div{
+    height: 100%;
+    background-image: url(../images/loading.gif);
+    background-size: 120px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+#content_sleeping_div{
+    height: 280px;
+    width: 470px;
+    margin: 110px auto;
+    background-image: url(../images/sleeping.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+#content_ready_div {
+    height:100%;
+    text-align:center;
+}
+#content_ready_div>div {
+    height:100%;
+}
+.dynamic_pageHome_line1_div {
+    margin-top: 90px;
+}
+.dynamic_pageHome_line2_div {
+    margin-top: -40px;
+}
+.line2_div_right {
+    margin-left:110px;
+    margin-right:-110px;
+}
+#dynamic_pageHome_div {
+    margin-top:60px;
+}
+.dynamic_pageHome_app_button {
+    margin:10px;
+    display: inline-block;
+}
+.dynamic_pageHome_app_button>div{
+    font-size: 40px;
+    width: 200px;
+    color: white;
+    height: 200px;
+    text-align: center;
+    border-radius: 100px;
+    white-space: normal;
+    display: table-cell;
+    vertical-align: middle;
+}
+.dynamic_page_line1_div {
+    /* margin-top: -35px; */
+}
+.dynamic_page_line2_div {
+    margin-top: -42px;
+}
+.dynamic_page_app_button {
+    margin:10px;
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    text-align: center;
+}
+.dynamic_page_app_button>img{
+    height: 200px;
+    width: 200px;
+}
+.dynamic_page_app_button>div{
+    font-size:25px;
+    color:white;
+}
+
+/***
+    FOOTER BAR
+***/
+
+#footer_div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+}
+#footer_all_apps_dropdown {
+    width: 1240px;
+    right: 20px;
+    bottom: 60px;
+    max-height: 710px;
+    border-radius: 0px;
+    overflow-y: scroll;
+    text-align: center;
+}
+.dynamic_all_apps_dropdown_app_div {
+    width: 215px;
+    margin: 10px;
+    text-align: center;
+    display: inline-table;
+}
+.dynamic_all_apps_dropdown_app_div>img {
+    border: none;
+    background: transparent;
+    outline-style:none;
+    height: 150px;
+    width: 150px;
+}
+.dynamic_all_apps_dropdown_app_div>div{
+    font-size:20px;
+}

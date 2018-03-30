@@ -1,0 +1,23 @@
+{
+	"0":{
+		"title":{
+			"English":"Retail",
+			"French":"Vente"
+		},"apps":[
+			"product-information","shop-orientation","loyalty-program","satisfaction-survey"]
+	},
+	"1":{
+		"title":{
+			"English":"Tourism",
+			"French":"Tourisme"
+		},"apps":
+			["check-in-7b9a99", "loyalty-program", "satisfaction-survey"]
+	},
+	"2":{
+		"title":{
+			"English":"Office",
+			"French":"Bureau"
+		},"apps":[
+		"bank-welcome", "loyalty-program", "satisfaction-survey"]
+	}
+}

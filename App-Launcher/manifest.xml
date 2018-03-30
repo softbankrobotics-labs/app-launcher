@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="3.0.3" uuid="app-launcher">
+ <names>
+  <name lang="en_US">App-Launcher</name>
+  <name lang="en_US-x-scrald">App-Launcher</name>
+ </names>
+ <descriptions>
+  <description lang="en_US">Launcher for applications
+Create a set of pages, each containing the desired applications. 
+Preferences for customization in domain tool.applauncher.page:
+Create your own pages configuration
+key:
+page1(2,3,4...)
+format value:
+{'title':{'English':'Retail','French':'Vente'},'apps':['product-information','shop-orientation','loyalty-program','satisfaction-survey']}
+Preferences for customization in domain tool.applauncher:
+keys:
+- logo : changes the front page logo on tablet (ex: Pepper-white.png)
+- behaviorNameDisplayed : 1 to show apps' name
+- attachedApplication : another app is displayed on tablet instead of the default page
+- conditionExpression : launch trigger condition for tablet to be displayed
+- dialogAlwaysRunning : boolean default False : bypass run_dialog and run the dialog automatically.
+Preferences you have to add  in domain com.aldebaran.system.tablet:
+- MainActivity : image
+- MainResourceURL : http://198.18.0.1/apps/app-launcher/resources/background.jpg</description>
+  <description lang="en_US-x-scrald">Launcher for applications
+Create a set of pages, each containing the desired applications. 
+Preferences for customization in domain tool.applauncher.page:
+Create your own pages configuration
+key:
+page1(2,3,4...)
+format value:
+{'title':{'English':'Retail','French':'Vente'},'apps':['product-information','shop-orientation','loyalty-program','satisfaction-survey']}
+Preferences for customization in domain tool.applauncher:
+keys:
+- logo : changes the front page logo on tablet (ex: Pepper-white.png)
+- behaviorNameDisplayed : 1 to show apps' name
+- attachedApplication : another app is displayed on tablet instead of the default page
+- conditionExpression : launch trigger condition for tablet to be displayed
+- dialogAlwaysRunning : boolean default False : bypass run_dialog and run the dialog automatically.
+Preferences you have to add  in domain com.aldebaran.system.tablet:
+- MainActivity : image
+- MainResourceURL : http://198.18.0.1/apps/app-launcher/resources/background.jpg</description>
+ </descriptions>
+ <supportedLanguages>
+  <language>en_US</language>
+  <language>ar_SA</language>
+  <language>da_DK</language>
+  <language>cs_CZ</language>
+  <language>de_DE</language>
+  <language>el_GR</language>
+  <language>es_ES</language>
+  <language>fr_FR</language>
+  <language>fi_FI</language>
+  <language>it_IT</language>
+  <language>ja_JP</language>
+  <language>ko_KR</language>
+  <language>nl_NL</language>
+  <language>nn_NO</language>
+  <language>pl_PL</language>
+  <language>pt_BR</language>
+  <language>pt_PT</language>
+  <language>ru_RU</language>
+  <language>sv_SE</language>
+  <language>tr_TR</language>
+  <language>zh_CN</language>
+  <language>zh_TW</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+  <language>ar_SA</language>
+  <language>da_DK</language>
+  <language>cs_CZ</language>
+  <language>de_DE</language>
+  <language>el_GR</language>
+  <language>es_ES</language>
+  <language>fr_FR</language>
+  <language>fi_FI</language>
+  <language>it_IT</language>
+  <language>ja_JP</language>
+  <language>ko_KR</language>
+  <language>nl_NL</language>
+  <language>nn_NO</language>
+  <language>pl_PL</language>
+  <language>pt_BR</language>
+  <language>pt_PT</language>
+  <language>ru_RU</language>
+  <language>sv_SE</language>
+  <language>tr_TR</language>
+  <language>zh_CN</language>
+  <language>zh_TW</language>
+ </descriptionLanguages>
+ <contents>
+  <dialogContent topicName="applauncher_pages_names_topic" typeVersion="1.0">
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_arw.top" language="ar_SA"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_czc.top" language="cs_CZ"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_dad.top" language="da_DK"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_ged.top" language="de_DE"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_grg.top" language="el_GR"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_enu.top" language="en_US"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_spe.top" language="es_ES"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_fif.top" language="fi_FI"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_frf.top" language="fr_FR"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_iti.top" language="it_IT"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_jpj.top" language="ja_JP"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_kok.top" language="ko_KR"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_dun.top" language="nl_NL"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_non.top" language="nn_NO"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_plp.top" language="pl_PL"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_ptb.top" language="pt_BR"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_ptp.top" language="pt_PT"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_rur.top" language="ru_RU"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_sws.top" language="sv_SE"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_trt.top" language="tr_TR"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_mnc.top" language="zh_CN"/>
+   <topic path="applauncher_pages_names_topic/applauncher_pages_names_topic_mnt.top" language="zh_TW"/>
+  </dialogContent>
+ </contents>
+ <requirements>
+  <naoqiRequirement minVersion="2.4" maxVersion="2.5"/>
+  <robotRequirement model="JULIETTE"/>
+ </requirements>
+ <services>
+  <service name="AppLauncher" autorun="true" execStart="/usr/bin/python2 lib/app_launcher.py"/>
+ </services>
+</package>
