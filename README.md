@@ -45,9 +45,7 @@ Domain
 com.aldebaran.system.tablet
 
 * Key : MainActivity / Value : image.png
-
-Key : MainResourceURL / Value :
-http://198.18.0.1/apps/app-launcher/resources/background.jpg
+* Key : MainResourceURL / Value : http://198.18.0.1/apps/app-launcher/resources/background.jpg
 
 Default file of preferences : "defaultPreferences.json"
 Located in : html/resources
