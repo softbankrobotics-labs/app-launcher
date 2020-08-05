@@ -1,14 +1,29 @@
-app-launcher
+# App-launcher
 
-Gestions des préférences
+This is a configurable applications launcher for Pepper. 
 
-Domaine
-tool.applauncher.page
+## Pages
+You can organise the apps in pages and dispose them as you wish on the home page. 
 
-key
-page+i
+This is configured using preferences:
+* Domain : tool.applauncher.page
+* key : page1(2,3,4...)
+* Values :
 
-format value
+{
+    'title': {
+        'English':'Name of my page',
+        'French':'Nom de ma page',
+        ...
+    },
+    'apps': [
+        'app-uuid-1',
+        'app-uuid-2',
+        ...
+    ]
+}
+
+Example of values :
     {'title':{'English':'Retail','French':'Vente'},'apps':['product-information','shop-orientation','loyalty-program','satisfaction-survey']}
 
     {'title':{'English':'Tourism','French':'Tourisme'},'apps':['check-in-7b9a99','check-in-7b9a99', 'loyalty-program', 'satisfaction-survey']}
@@ -16,56 +31,26 @@ format value
     {'title':{'English':'Office','French':'Bureau'},'apps':['bank-welcome','bank-welcome', 'loyalty-program', 'satisfaction-survey']}
 
 
-Domaine
-tool.applauncher
+## Configuration
 
-key
-logo
+Domain: tool.applauncher:
 
-format value
-pepper.png
+* Key: logo / Value : pepper.png
+* Key: behaviorNameDisplayed / Value : 1 to show apps names, or 0 to hide them.
+* Key : dialogAlwaysRunning / Value : boolean default False : bypass run_dialog and run the dialog automatically.
+* Key : hideSystemApps / Value : 1 to filter system apps so they are not displayed in the app list
+* Key : hideChoregrapheTestApp / Value : 1 to filter the Choregraphe ".lastUploadedChoregrapheBehavior" so it is no displayed in the app list
 
-
-Domaine
-tool.applauncher
-
-key
-behaviorNameDisplayed
-
-format value
-    0 (le nom des apps est caché)
-    1 (le nom des apps est visible)
-
-Domaine
-tool.applauncher
-
-key
-dialogAlwaysRunning
-
-format value
-    0 (le dialog ne démarre pas automatiquement)
-    1 (le dialog démarre automatiquement à la sortie d'app et au boot du robot)
-
-Domaine
+Domain
 com.aldebaran.system.tablet
 
-key
-MainActivity
+* Key : MainActivity / Value : image.png
 
-format value
-image
-
-Domaine
-com.aldebaran.system.tablet
-
-key
-MainResourceURL
-
-format value
+Key : MainResourceURL / Value :
 http://198.18.0.1/apps/app-launcher/resources/background.jpg
 
-Fichier par défaut des préférences "defaultPreferences.json"
-Présent dans html/resources
+Default file of preferences : "defaultPreferences.json"
+Located in : html/resources
 
 [
     {
@@ -98,9 +83,10 @@ Présent dans html/resources
     }
 ]
 
-Récupération de l'icone de l'app
 
-	1) Connexion ssh puis
+### How to get the icon of an app ?
+
+	1) Using SSH
 
 import qi
 s = qi.Session()
@@ -114,9 +100,9 @@ unefois l'image png base64 convertie en string, pour l'afficher en html
 <img src="data:image/png;base64,'+imgEnString+'"/>
 
 
-	2) Fonction python et JS
+	2) Using python et JS
 
- côté python:
+ python:
 
 	import base64
 
@@ -128,18 +114,19 @@ unefois l'image png base64 convertie en string, pour l'afficher en html
         """
         return base64.encodestring(self.pacman.packageIcon(uuid))
 
- côté JS:
+ JS:
 
- 	//id_div, (str) id de la div ou l'on souhaite ajouter l'image
- 	//uuid, (str) application id de l'app dont on veut l'image
+ 	//id_div, (str) id of the div where you want to add the icon
+ 	//uuid, (str) application id of the app from which you want to get the icon
 
  	function get_icon_app(id_div, uuid){
-    session.service("DemoLauncher").then( function(dm) { //remplacer DemoLauncher par le service dans lequel est ajoutée la fonction python
+    session.service("DemoLauncher").then( function(dm) { // Replace "DemoLauncher" by the name of your service
         dm.package_icon(uuid).then(function (iconApp){
             $("#"+id_div).append('<div><img src="data:image/png;base64,'+iconApp+'" height=150px width=150px style="margin-bottom:20px"/></div>');
         });
     });
 }
 
+## License
 
-
+This project is licensed under the BSD 3-Clause "New" or "Revised" License - see the [COPYING](COPYING.md) file for details.
